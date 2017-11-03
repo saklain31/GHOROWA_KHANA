@@ -1,1 +1,1 @@
-This is Ghorowa Khana.
+This is Ghorowa Khana. A web app.
