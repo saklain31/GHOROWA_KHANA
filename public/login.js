@@ -20,8 +20,7 @@ function signed_in()
 		});
 
     		console.log("User state changed");
-                //firebase.auth().signOut();
-                console.log("User signed out");
+            console.log("User signed out");
 		window.location.href = "index2.html";
                 return true;
   	}
@@ -49,11 +48,9 @@ function login_func()
 	
 	const promise = auth.signInWithEmailAndPassword(email_val,pass_val);
 	
-	signed_in();	//
+	signed_in();	
 
-	alert("hiiii");
-	
-	
+	alert("hi");
 	
 	promise.catch(e => console.log(e.message));
 
@@ -167,64 +164,3 @@ function order()
 		  });
 }
 
-//**************************
-/*
-var newholder;
-function StateHolder()
-{
-	var inState;
-	var outState;
-	var currentState;
-	console.log("StateHolder");
-	this.createState= function()
-	{
-		inState = new loggedInState();
-		outState = new loggedOutState();
-		currentState=outState;
-	}
-
-	this.begin = function()
-	{
-		alert(currentState);
-		currentState.go;
-	}
-
-	this.changeState = function(state)
-	{	
-		currentState = state;
-	}
-
-
-}
-
-var loggedInState =function()
-{
-	this.go= function()
-	{
-		log_out();
-		newholder.changeState(newholder.outState);
-	}
-}
-
-var loggedOutState=function()
-{
-	this.go= function()
-	{
-		login_func();
-		newholder.changeState(newholder.inState);
-	}
-}
-
-
-function run () 
-{
-	console.log("run called");
-	newholder = new StateHolder();
-	newholder.createState();
-}
-
-function change()
-{
-	alert("change called");
-	newholder.begin();
-} */

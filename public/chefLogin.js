@@ -5,67 +5,46 @@
         
     	const psw = document.getElementById('pass2');
     	const email = document.getElementById('email2');
-    	//const testbtn = document.getElementById('login');
      
     	const email_val = email.value;
     	const pass_val = psw.value;
     	const auth = firebase.auth();
-     
-     
-    	//console.log("something nnn");
-     
+    
     	const promise = auth.signInWithEmailAndPassword(email_val,pass_val);
      
-    	//console.log("something");
-    	//alert("hiiii");
-     
     	firebase.auth().onAuthStateChanged(function(user) {
-        alert("Hello");
-        alert("user"+user);
-    	if(user!=null)
+            alert("Hello");
+     
+    	if(user!==null)
     	{
-     
-    		//console.log(JSON.stringify(user));
-     
-    		var userId = user.uid;
+
+        	var userId = user.uid;
      
     		alert("user = "+userId);
-            
-            if(userId!=null)
-    		{
-                var place;
-    		    firebase.database().ref('chefIndex').once('value').then(function(snapshot) {
-                        console.log("inside place");
-                        console.log(snapshot.key);
-              			place=snapshot.child(userId).val();
-                        console.log(place);
-              			alert(place);
-                        console.log("myplace"+place);
-                
-                        firebase.database().ref('chefLocation/'+place).once('value').then(function(snapshot) {
-                        var ema=snapshot.child(userId).child("email").val();
-                        var name=snapshot.child(userId).child("username").val();
-                        //var ema = ref.email;
-                        console.log("ref"+ema);
-                        console.log(name);
-                        alert("index");
-                        window.location.href = "index3.html";
-
-                });
-    		  });
-            }
-            
-
+     
+    		var place;
+    		firebase.database().ref('chefIndex').once('value').then(function(snapshot) {
+                console.log("inside place");
+      			place=snapshot.child(userId).val();
+                console.log(place);
+      			alert(place);
+    		});
+     
+    	    firebase.database().ref('chefLocation/'+place+'/'+userId).once('value').then(function(snapshot) {
+      			var ref=snapshot.val();
+    			var ema = ref.email;
+      			console.log("ref"+ema);
+    		});
     		alert("woah");
-    	   //window.location.href = "index3.html";
-            //return true;
+    	   window.location.href = "index3.html";
+            
       	}
     	else {
         		console.log("No user is signed in.");
-                    //return false;
+                    return false;
       	}
     	});
      
-    	promise.catch(e => console.log(e.message));
+    promise.catch(e => console.log(e.message));
      
-    }
+}

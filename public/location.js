@@ -13,18 +13,18 @@ var nameDivId = 0;
     projectId: "test1-aa9c8",
     storageBucket: "test1-aa9c8.appspot.com",
     messagingSenderId: "569411524002"
-  };
-  firebase.initializeApp(config);
+ };
+ firebase.initializeApp(config);
 
 function create(htmlStr) {
     var frag = document.createDocumentFragment(),
-        temp = document.createElement('div');
+    temp = document.createElement('div');
     temp.innerHTML = htmlStr;
     while (temp.firstChild) {
         frag.appendChild(temp.firstChild);
-      }
-        return frag;
     }
+    return frag;
+}
 	
 function insertAfter(newNode , referenceNode)
 {
@@ -54,8 +54,6 @@ function addNewRow()
 	n_id = picId + picRows;
 	fre = create(' <div class = "row" id = "'+n_id+'"	></div>');
     referenceNode.parentNode.insertBefore(fre,fr.nextSibling);
-	//document.getElementById(aTagId).innerHTML = resName1;
-	//document.getElementById(aTagId2).innerHTML = resName2;
 }	
 window.onload =  loadComponent();
 
@@ -99,6 +97,4 @@ function loadComponent()
 		});
 		addNewRow();
 	});
-	
-
 }

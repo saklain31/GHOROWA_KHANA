@@ -5,10 +5,11 @@
 	    <title>My Framework</title>
 	    <link rel="stylesheet" src = "//normalize-css.googlecode.com/svn/trunk/normalize.css" href="css/chefView.css">
 	    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
-		
+		<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+	    <script src ="chefView.js"></script>
 	</head>
 <body background =  "./Picture/back13.jpg">
-    <div class="grid"  id="root">
+    <div class="grid" >
         <div class="row">
            <div class="col-1"><img src="./Picture/food_.png" alt="This is an image">
            <!-- <h3 class="SignUp">User Signup Or Chef Signup</h3> -->
@@ -17,7 +18,7 @@
             <!-- <div class= "col-6">
                 <h2 class="title">GHOROWA KHANA</h2>
                 <h5 class="designation">Let Home Made Food Walk To You</h5>
-                <!-- <h2 class="login">Login</h2>
+                <!-- <h2 class="login">Login</h2> -->
             </div> -->
         </div>
 <!--         <div class="background">
@@ -35,29 +36,11 @@
 		        
         </div>
 
-        <div class="row" id="adb">
-
-            <div class = "col-12-cen">
-               <form action="#" id="form2" name="form2" >
-            <!--<div class="popclose">
-                <a onclick = "div2_hide();">X</a>
-            </div> -->
-            <h2> ADD ITEM</h2>
-            <hr> <br>
-
-            <level><b> Item Name </b></level>
-            <input id="itName" name="itName" placeholder="Item name" type="text" required><br> <br>
-
-            <level><b> Price </b></level><br><br>
-            <input type = "number" id = "price" placeholder = "Price" name = "prc" required><br><br>
-            <input type = "submit" id="login"  value="Add" onclick ="addItem()" > <br>
-
-        </form> 
-            </div>
+        <div class="row">
+            <div class = "col-12-cen"><button type="button" onclick="div2_show()">Add Item</button></div>
         </div>
 
 	</div> 
-    <!-- <button type="button" onclick="addItem()">Add Item</button> --> 
 	
 	
 <div id="def">
@@ -82,7 +65,6 @@
     </div>
 </div>
 
-<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
- <script src ="chefView.js"></script>	
+	
 </body>
 </html>

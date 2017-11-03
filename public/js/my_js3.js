@@ -1,15 +1,13 @@
 function show_profile()
 {
-       document.getElementById('blur').style.opacity = 0.30;
-       document.getElementById('card').style.display = "block";
+   document.getElementById('blur').style.opacity = 0.30;
+   document.getElementById('card').style.display = "block";
 }
 
 function hide_profile()
 {
-  
-   document.getElementById('card').style.display = "none";
-  document.getElementById('blur').style.opacity = 1;
-   
+    document.getElementById('card').style.display = "none";
+    document.getElementById('blur').style.opacity = 1;  
 }
 
 function loc_check()

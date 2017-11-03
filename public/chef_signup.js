@@ -32,11 +32,6 @@ function chef_doSomething() {
         alert("Password should have at least 6 characters");
         return false;
     }
-    /*else if(psw != conpsw)
-    {
-        alert("Password does not match");
-        return false;
-    }*/
     else
     {
         complete_signup();
@@ -45,7 +40,7 @@ function chef_doSomething() {
 
 
 function complete_signup() {
-    const email_val = email.value; //check for real email
+    const email_val = email.value; 
     const pass_val = psw.value;
 
     const auth = firebase.auth();
@@ -64,12 +59,9 @@ function complete_signup() {
             firebase.database().ref('chefLocation/'+ghorLocation.value + '/' + userId).set({
                 username: username.value,
                 email: email_val,
-                //ghorLocation: ghorLocation.value,
-                //userID: userId
             }).then(function() {
                 console.log('Data write succeeded for chef');
                 alert(" chef Sign up complete");
-                //window.location="index.html";
             })
                 .catch(function(error) {
                     console.log('Data write failed for chef');
@@ -77,7 +69,6 @@ function complete_signup() {
 
             firebase.database().ref('chefIndex/'+userId).set( ghorLocation.value).then(function() {
                 console.log('Data write succeeded for chef');
-                //alert(" chef Sign up complete");
                 window.location="index.html";
             })
                 .catch(function(error) {

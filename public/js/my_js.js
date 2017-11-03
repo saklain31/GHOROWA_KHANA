@@ -1,51 +1,44 @@
 // Validating Empty Field
 
 var name = "";
-
-window.onload = funct();
-
+window.onload = funct()
 var curState;
+
 function funct()
 {
 
      curState = 'out';
      localStorage.setItem('userState',curState);
      var v = localStorage.getItem('userState');
-	 localStorage.setItem('hasItem',"no");
      
 }
 
 
-
-
 function check_empty() {
-var emval = document.getElementById("email2").value;
-if(!(emval.includes("@gmail.com")) && !(emval.includes("@yahoo.com")) && !(emval.includes("@outlook.com")) )
-{
-     alert("Invalid email format"); return false;
-}
-//else if (document.getElementById('pass2').value != document.getElementById('repass2').value ) {
-//alert("Password doesn't match");
-//return false;
-//} 
-else {
-document.getElementById('form2').submit();
-alert("Registration successful");
-}
+    var emval = document.getElementById("email2").value;
+    if(!(emval.includes("@gmail.com")) && !(emval.includes("@yahoo.com")) && !(emval.includes("@outlook.com")) )
+    {
+         alert("Invalid email format"); return false;
+    }
+    else 
+    {
+      document.getElementById('form2').submit();
+      alert("Registration successful");
+    }
 }
 
 function func(name)
 {
-  alert(name);
-  if(name==="") return;
-  else
-  {
-	  var sup= document.getElementById('sup');
-	  sup.innerText = name;
-	  var lin = document.getElementById('lin');
-	  alert(lin.innerText); 
-	  alin.innerText = '';
-  }
+    alert(name);
+    if(name==="") return;
+    else
+    {
+  	  var sup= document.getElementById('sup');
+  	  sup.innerText = name;
+  	  var lin = document.getElementById('lin');
+  	  alert(lin.innerText); 
+  	  alin.innerText = '';
+    }
 }
 
 
@@ -69,25 +62,27 @@ function loginValidate()
    localStorage.setItem("username",name);
    return true;
 }
+
 //Function To Display Popup
 function div_show() {
-document.getElementById('abc').style.display = "block";
+    document.getElementById('abc').style.display = "block";
 }
+
 //Function to Hide Popup
 function div_hide(){
-document.getElementById('abc').style.display = "none";
-}
-function div2_hide(){
-document.getElementById('def').style.display = "none";
-}
-function div2_show() {
-document.getElementById('abc').style.display = "none";
-document.getElementById('def').style.display = "block";
+    document.getElementById('abc').style.display = "none";
 }
 
+function div2_hide(){
+    document.getElementById('def').style.display = "none";
+}
+
+function div2_show() {
+    document.getElementById('abc').style.display = "none";
+    document.getElementById('def').style.display = "block";
+}
 
 //Iterator
-
 var Iterator = function(items) {
     this.index = 0;
     this.items = items;
@@ -132,13 +127,12 @@ function locationCheck()
    var location = document.getElementById('loc').value;
    console.log("location "+location);
    for (var item = iter.first(); iter.hasNext(); item = iter.next()) {
-
         console.log(item);
         if(item == location)
         {
-               console.log("In");
-               redirect(item);
-               return;
+           console.log("In");
+           redirect(item);
+           return;
         }
     }
 }

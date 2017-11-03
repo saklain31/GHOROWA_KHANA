@@ -6,8 +6,6 @@ window.onload = fac();
 function fac()
 {
 	console.log("factory created");
-        // var state = "loggedin";
-        // localStorage.setItem("userState",state);
 	factory = new Factory();
 }
 
@@ -18,12 +16,12 @@ function Factory() {
         if (type === "chef") {
             object = new Chef();
         } 
-	else if (type === "user") {
+        else if (type === "user") {
             object = new User();
         } 
- 
+
         object.type = type;
- 
+
         return object;
     }
 }
