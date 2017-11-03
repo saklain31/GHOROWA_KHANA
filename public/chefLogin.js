@@ -20,9 +20,9 @@
     	//alert("hiiii");
      
     	firebase.auth().onAuthStateChanged(function(user) {
-            alert("Hello");
+        alert("Hello");
         alert("user"+user);
-    	if(user!==null)
+    	if(user!=null)
     	{
      
     		//console.log(JSON.stringify(user));
@@ -30,23 +30,30 @@
     		var userId = user.uid;
      
     		alert("user = "+userId);
-     
-    		var place;
-    		firebase.database().ref('chefIndex').once('value').then(function(snapshot) {
-                console.log("inside place");
-                console.log(snapshot.key);
-      			place=snapshot.child(userId).val();
-                console.log(place);
-      			alert(place);
-                console.log("myplace"+place);
-                firebase.database().ref('chefLocation/'+place).once('value').then(function(snapshot) {
-                var ema=snapshot.child(userId).child("email").val();
-                //var ema = ref.email;
-                console.log("ref"+ema);
-                window.location.href = "index3.html";
+            
+            if(userId!=null)
+    		{
+                var place;
+    		    firebase.database().ref('chefIndex').once('value').then(function(snapshot) {
+                        console.log("inside place");
+                        console.log(snapshot.key);
+              			place=snapshot.child(userId).val();
+                        console.log(place);
+              			alert(place);
+                        console.log("myplace"+place);
+                
+                        firebase.database().ref('chefLocation/'+place).once('value').then(function(snapshot) {
+                        var ema=snapshot.child(userId).child("email").val();
+                        var name=snapshot.child(userId).child("username").val();
+                        //var ema = ref.email;
+                        console.log("ref"+ema);
+                        console.log(name);
+                        alert("index");
+                        window.location.href = "index3.html";
 
                 });
-    		});
+    		  });
+            }
             
 
     		alert("woah");
@@ -55,7 +62,7 @@
       	}
     	else {
         		console.log("No user is signed in.");
-                    return false;
+                    //return false;
       	}
     	});
      

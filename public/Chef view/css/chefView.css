@@ -1,0 +1,207 @@
+/** {
+    border: 1px solid red !important;
+}*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+/*@media only screen and (max-width: 500px) {
+    p{
+        display: none;
+    }
+}*/
+
+.grid {
+    //margin: 0 auto;
+    max-width: 1300px;
+    width: 100%;
+    position: relative;
+}
+
+.row {
+    width: 100%;
+     //margin-bottom: 20px;
+    display: flex;
+}
+.row-f {
+    width: 100%;
+    display: flex;
+}
+
+.row-three-icons {
+    width: 100%;
+     //margin-bottom: 20px;
+     padding-top: 20;
+    display: flex;
+}
+.top{
+    width: 100%;
+    display: flex;
+    position: absolute;
+}
+.background{
+    width: 100%;
+    display: flex;
+    z-index: -1;
+}
+.title{
+    padding-left: 400;
+}
+
+.smallTitle{
+    padding-left: 10;
+    padding-top: 15;
+}
+
+.designation{
+    padding-left: 420;
+}
+.login{
+    padding-left: 555;
+}
+.SignUp{
+    padding-left: 0;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-3-cen{
+    width: 25%;
+    text-align: center;
+}
+
+.order-cart{
+    width: 25%;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    padding: 50px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+.col-4cen {
+    width: 33.33%;
+    text-align: center;
+}
+.col-4-left-cen {
+    width: 33.33%;
+    padding-left: 30;    
+}
+.col-4right{
+    width: 33.33%;
+    text-align: right;
+}
+.col-4right-cen{
+    width: 33.33%;
+    padding-left: 350;
+}
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+.col-6-right{
+    width: 50%;
+    text-align: right;
+}
+.col-6-left{
+    width: 50%;
+    text-align: left;
+}
+.col-6-cen{
+    width: 50%;
+    text-align: center;
+}
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+.col-11-cen{
+    width: 91.66%;
+    text-align: center;
+}
+
+.col-12 {
+    width: 100%;
+}
+.col-12-cen{
+    width: 100%;
+    text-align: center;
+}
+.big-image{
+    width: 100%;
+    z-index: -1;
+}
+
+.search-box{
+    position: absolute;
+    text-align: center;
+    padding-top: 150;
+    width: 100%;
+}
+
+input[type=text] {
+    width: 230px;
+    height: 30px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 80% */
+input[type=text]:focus {
+    width: 80%;
+}
+
+datalist { 
+    display: none;
+}
+a{
+    color:inherit;
+    font-family:  sans-serif;
+}
+
+button
+{
+    color : inherit;
+    background-color: #996633;
+    font-family: sans-serif;
+}

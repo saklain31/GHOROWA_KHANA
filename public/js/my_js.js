@@ -11,6 +11,7 @@ function funct()
      curState = 'out';
      localStorage.setItem('userState',curState);
      var v = localStorage.getItem('userState');
+	 localStorage.setItem('hasItem',"no");
      
 }
 
@@ -112,11 +113,13 @@ function redirect(item)
 {
       if(item === "Mirpur")
     {
-        window.location = "mirpur.html";
+		localStorage.setItem("loc",item);
+        window.location.href = "location.html";
     }
     else if (item === "Dhanmondi")
     {
-        window.location = "dhanmondi.html";
+		localStorage.setItem("loc",item);
+        window.location = "location.html";
     }
 }
 
