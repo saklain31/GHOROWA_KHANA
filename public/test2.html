@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation:Demo Preview</title>
+<link href="formvalid.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<script>
+function doSomething() {
+    // Make quick references to our fields.
+var fname = document.getElementById("firstname").value;
+var uname = document.getElementById("username").value;
+var email = document.getElementById("email").value;
+var psw = document.getElementById("psw").value;
+var conpsw = document.getElementById("conpsw").value;
+if(uname.length<6)
+{
+     alert("User name should have at least 6 characters");
+     return false;
+}
+else if(psw.length<6)
+{
+     alert("Password should have at least 6 characters");
+     return false;
+}
+else if(psw != conpsw)
+{
+      alert("Password does not match");
+      return false;
+}
+alert("Sign up complete");
+location.href="main.html"
+}
+
+</script>
+
+<form  onsubmit="return doSomething();" class="my-form">
+    <input type="submit" value="Submit">
+</form>
+
+<div id="form">
+<p id="head"></p>
+<!-- This segment displays the validation rule -->
+<h2>JavaScript Form Validation</h2>
+<!-- Form starts from here -->
+<form onsubmit="return doSomething();">
+<label>Full Name:</label>
+<input id='firstname' type='text' required>
+<p id="p1"></p>
+<!-- This segment displays the validation rule for name -->
+<label>Username(6-8 characters):</label>
+<input id='username' type='text' required>
+<p id="p2"></p>
+<!-- This segment displays the validation rule for user name -->
+<label>Email:</label>
+<input id='email' type='text' required>
+<p id="p3"></p>
+<!-- This segment displays the validation rule for email -->
+<input type = "radio" name = "gender" value="male" checked> Male 
+<input type = "radio" name = "gender" value="female" > Female  
+<p id = "p4" > </p>
+<level> Password(Should be at least 6 characters) </level> 
+<input type = "password" placeholder = "Password" id = "psw" name = "pass" required>
+<level> Confirm Password </level>
+<input type = "password" placeholder = "Confirm Password" id = "conpsw" name = "conpass" required> 
+<input type='submit' value="SignUp" >
+</form>
+</div>
+</body>
+
+</html>

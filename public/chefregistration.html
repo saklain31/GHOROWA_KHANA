@@ -1,0 +1,66 @@
+<!doctype.html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Chef Registration</title>
+    <link rel="stylesheet" src = "//normalize-css.googlecode.com/svn/trunk/normalize.css" href="css/upro.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+</head>
+<body>
+<div class="grid" >
+    <div class="top">
+        <div class="col-6"><img src="./Picture/food_.png" alt="This is an image">
+            <!-- <h3 class="SignUp">User Signup Or Chef Signup</h3> -->
+        </div>
+        <div class= "col-6">
+            <h2 class="title">GHOROWA KHANA</h2>
+            <h5 class="designation">Let Home Made Food Walk To You</h5>
+            <!-- <h2 class="login">Login</h2> -->
+        </div>
+    </div>
+    <div class="background">
+        <img src="./Picture/dark-yellow.jpg" alt="This is an image" width="100%" height="100">
+    </div>
+    <div class = "row"><h2>Chef registration</h2></div>
+    <div class="row">
+        <div class="col-6">
+            <form>
+               <level class="lev"> Ghor Name: </level> <br>
+                <input id = "gname" type="text" name="username" placeholder = "Ghor name" size="35" ><br>
+                
+                <level class="lev" >Email:</level> <br>
+                <input id = "em" type="text" name="email" placeholder = "Email" size ="35"> <br>
+                <levle class="lev" >Password: </level><br>
+                <input id = "pass" type="password" name="passWord" placeholder = "Password" size="35" ><br>
+                
+                <level class="lev" > Location:</level> <br>
+                <input list="Resturant" id = "loc">
+                <datalist id="Resturant">
+                <option value="Mirpur">
+                <option value="Dhanmondi">
+                <option value = "Banani">
+                <option value = "Gulshan">
+                <option value = "Basundhara">
+                </datalist> <br>
+                <br>
+            </form>
+        </div>
+       
+</div>
+        <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+
+<script src="chef_signup.js"> </script>
+<script src="factory.js"> </script>
+<div class = "row">
+<div class="col-6">
+<form  onclick="chefSignup()" class="my-form">
+    <input type="button" value="Sign Up" id="submit">
+</form>
+</div>
+</div>
+        
+    </div>
+</div>
+</div>
+</body>
+</html>

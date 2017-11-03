@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ghorowa Khana| Signup</title>
+<link href="formvalid.css" rel="stylesheet"> 
+<link rel = "stylesheet" rel = "cs/main.css">
+
+</head>
+
+<body>
+
+ <div class="grid" >
+        <div class="row">
+           <div class="col-6"><img src="./Picture/food.jpg" alt="This is an image">
+            </div>
+         </div>
+         <div class= "row">
+            <div class= "col-4">
+                <h2 class="title">GHOROWA KHANA</h2>
+                <h5 class="designation">Let Home Made Food Walk To You</h5>
+            </div>
+        </div>
+</div>
+<div id="form">
+<p id="head"></p>
+<!-- This segment displays the validation rule -->
+<h2>User Registration</h2>
+<!-- Form starts from here -->
+<form onsubmit="return doSomething();">
+<label>Full Name:</label>
+<input id='firstname' type='text' required>
+<p id="p1"></p>
+<!-- This segment displays the validation rule for name -->
+<label>Username(6-8 characters):</label>
+<input id='username' type='text' required>
+<p id="p2"></p>
+<!-- This segment displays the validation rule for user name -->
+<label>Email:</label>
+<input id='email' type='text' required>
+<p id="p3"></p>
+<!-- This segment displays the validation rule for email -->
+<input type = "radio" name = "gender" value="male" checked> Male 
+<input type = "radio" name = "gender" value="female" > Female  
+<p id = "p4" > </p>
+<level> Password(Should be at least 6 characters) </level> 
+<input type = "password" placeholder = "Password" id = "psw" name = "pass" required>
+<level> Confirm Password </level>
+<input type = "password" placeholder = "Confirm Password" id = "conpsw" name = "conpass" required> 
+</form>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+
+<script src="signup.js"> </script>
+<script src="factory.js"> </script>
+
+<form  onclick="userSignup();" class="my-form">
+    <input type="button" value="Sign Up" id="submit">
+</form>
+
+
+</body>
+</html>

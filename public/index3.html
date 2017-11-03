@@ -1,0 +1,113 @@
+<!doctype.html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ghorowa Khana</title>
+    <link rel="stylesheet" src = "//normalize-css.googlecode.com/svn/trunk/normalize.css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/userpro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/navbar.js"></script> 
+    <script src = "js/my_js3.js"></script>
+    <script src= "login.js"></script>
+    
+</head>
+<body id="body" >
+ 
+<div id="blur" class="continer">
+</div>
+    <dv class="grid" >
+        <div class="row">
+           <div class="col-6"><img src="./Picture/food.jpg" alt="This is an image"> 
+            </div>
+            <div class= "col-6">
+                <h2 class="title">GHOROWA KHANA</h2>
+                <h5 class="designation">Let Home Made Food Walk To You</h5>
+                 <div class="topnav" id="myTopnav">
+                    <a href="index.html">GhorowaKhana</a>
+                     <a id="pro" href="javascript:void(0)" onclick="show_profile()"></a>
+                     <a href="contact.html">Contact Us</a>
+                     <a href="about.html">About</a>
+					 <a id="sout" href="javascript:void(0)" onclick="changeState()"> Sign out </a>
+                </div> 
+            </div>
+        </div>
+        <form>
+        <div class="search-box">
+            <!-- <input type="text" name="search" placeholder="Search.."> -->
+            <input list="Resturant" id = "loc">
+            <datalist id="Resturant">
+                <option value="Mirpur">
+                <option value="Dhanmondi">
+            </datalist>
+            <div class= "button"><button type="button" onclick = "loc_check()">Search</button></div>
+        </div>
+    </form>
+        <div class="row">
+            <div class="col-12"><img src="./Picture/big.jpg" alt="This is an image">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="smallTitle">What We Have To Offer</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4"><img src="./Picture/chef.jpg" alt="This is an image"></div>
+            <div class="col-4"><img src="./Picture/user.jpg" alt="This is an image"></div>
+            <div class="col-4"><img src="./Picture/cash.jpg" alt="This is an image"></div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <h4 class="label">As A Chef</h4>
+                 <h4 class="label">Sell Your Own Dishes</h4>
+            </div>
+                        <div class="col-4">
+                <h4 class="label">As An User</h4>
+                 <h4 class="label">Just Enjoy Home Made Food</h4>
+            </div>
+                        <div class="col-4">
+                <h4 class="label">Cash On Delivery</h4>
+                 <h4 class="label">Pay Only When You Have The Food</h4>
+            </div>
+        </div>
+        </div>
+     </div>
+</div>
+
+<div id="card">
+
+  <div class="popclose">
+    <a onclick = "hide_profile();">X</a>
+    </div>  
+  <img id="propic" src="Picture/sakla.jpg" alt="John" style="width:100%">
+  <h1 id ="uname" > Username </h1>
+     <p id = "pfn"> Full Name : Saklain Zaman </p>
+     <p id= "pgn"> Gender    : Male  </p>
+     <p id= "pem" > Email     : saklain@gmail.com </p> 
+  
+  <a href="#"><i class="fa fa-dribbble"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <a href="#"><i class="fa fa-facebook"></i></a><br><br>
+  <p><button onclick = "location.href='upro.html'">Edit profile</button></p>
+
+</div> 
+
+ <form>
+  <br>
+  <input type="text" name="firstname" id = "location"><br>
+  <br>
+  <input type="text" name="lastname" id = "item">
+  <br>
+  <br>
+  <button type="button" onclick = "order()" >Click Me!</button> 
+</form> 
+
+
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+
+<script src = "js/my_js4.js"></script>   
+</body>
+</html>

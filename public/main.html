@@ -1,0 +1,112 @@
+<!doctype.html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My Framework</title>
+    <link rel="stylesheet" src = "//normalize-css.googlecode.com/svn/trunk/normalize.css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+    <script src="js/my_js.js"></script>
+    
+</head>
+<body id="body" >
+ 
+
+</div>
+    <dv class="grid" >
+        <div class="row">
+           <div class="col-6"><img src="./Picture/food.jpg" alt="This is an image">
+           <button type="button" id="hmbutton" class="SignUp" onclick= "div_show()">Login</button>
+           <a onclick = "div_show()">Login</a>
+            </div>
+            <div class= "col-6">
+                <h2 class="title">GHOROWA KHANA</h2>
+                <h5 class="designation">Let Home Made Food Walk To You</h5>
+                <h2 class="login">Login</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12"><img src="./Picture/big.jpg" alt="This is an image">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2 class=smallTitle>What We Have To Offer</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4"><img src="./Picture/chef.jpg" alt="This is an image"></div>
+            <div class="col-4"><img src="./Picture/user.jpg" alt="This is an image"></div>
+            <div class="col-4"><img src="./Picture/cash.jpg" alt="This is an image"></div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <h4 class="label">As A Chef</h4>
+                 <h4 class="label">Sell Your Own Dishes</h4>
+            </div>
+                        <div class="col-4">
+                <h4 class="label">As An User</h4>
+                 <h4 class="label">Just Enjoy Home Made Food</h4>
+            </div>
+                        <div class="col-4">
+                <h4 class="label">Cash On Delivery</h4>
+                 <h4 class="label">Pay Only When You Have The Food</h4>
+            </div>
+        </div>
+        </div>
+     </div>
+
+<div id="abc">
+<!-- Popup Div Starts Here -->
+<div id="popupContact">
+<!-- Contact Us Form -->
+<form action="#" id="form" method="post" name="form">
+<button id="close"  onclick ="div_hide()"> X </button>
+<h2> Login </h2>
+<hr>
+<!--<input id="name" name="name" placeholder="Name" type="text" required>-->
+<input id="userName" name="username" placeholder = "User name" type = "text" required>  
+<input id="email" name="email" placeholder="Email" type="text" required><br><br>
+<!--<input type="radio" name = "gender" value = "male" checked> Male
+<input type = "radio" name = "gender" value = "female" > Female -->
+<input type = "password" id = "pass" placeholder = "Password" name = "psw" required><br><br>
+<!--<input type = "password" id = "repass" name = "pswr" required> -->
+<button type = "submit" class="SignUp" onsubmit="return loginValidate()" > Login </button><br><br>
+<button type = "button" class="SignUp" onclick = "location.href= 'signuppage.html' " > Create New Account </button> 
+
+</form>
+</div>
+</div>
+
+<!--<div id="def">
+
+<div id="popupContact">
+
+<form action="#" id="form2" method="post" name="form2" onsubmit = 'return check_empty()'>
+<button id="close"  onclick ="div2_hide()"> X </button>
+<h2> Sign Up </h2>
+<hr>
+<level><b> Name </b></level>
+<input id="name2" name="name" placeholder="Name" type="text" required>
+<level><b> User Name </b></level>
+<input id="userName2" name="username" placeholder = "User name" type = "text" required> 
+<level><b> Email </b></level> 
+<input id="email2" name="email2" placeholder="Email" type="text" required><br>
+
+<input type="radio" name = "gender" value = "male" checked> Male
+<input type = "radio" name = "gender" value = "female" > Female
+<level><b> Password </b></level>
+<input type = "password" id = "pass2" placeholder = "Password" name = "psw" required>
+<level><b> Confirm Password </b></level>
+<input type = "password" id = "repass2" placeholder = "Confirm Password" name = "pswr" required> 
+<input type = "submit" value="sign up" >
+
+</form>
+</div>
+</div>-->
+
+
+
+
+
+</body>
+</html>
