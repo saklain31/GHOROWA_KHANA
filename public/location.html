@@ -1,39 +1,35 @@
-<!doctype.html>
-	<html>
-	<head>
-	    <meta charset="utf-8">
-	    <title>My Framework</title>
-	    <link rel="stylesheet" src = "//normalize-css.googlecode.com/svn/trunk/normalize.css" href="css/mirpur.css">
-	    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
-	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		
-		
-		
-	</head>
-<body background = "Picture/back13.jpg">
-    <div class="grid" >
-        <div class="top">
-           <div class="col-6"><img src="Picture/food_.png" alt="This is an image">
-           <!-- <h3 class="SignUp">User Signup Or Chef Signup</h3> -->
-            </div>
-            <div class= "col-6">
-                <h2 class="title">GHOROWA KHANA</h2>
-                <h5 class="designation">Let Home Made Food Walk To You</h5>
-                <!-- <h2 class="login">Login</h2> -->
-            </div>
-        </div>
-        <div class="background">
-			<img src="Picture/dark-yellow.jpg" alt="This is an image" width="100%" height="100">
-		</div>
-	
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title>Ghorowa Khana</title>
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <script src="js/navbar.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDRSMxZObtlFU7eDgkWmJkMJrK4RfOWZPg",
+            authDomain: "test1-aa9c8.firebaseapp.com",
+            databaseURL: "https://test1-aa9c8.firebaseio.com",
+            projectId: "test1-aa9c8",
+            storageBucket: "test1-aa9c8.appspot.com",
+            messagingSenderId: "569411524002"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+</head>
+<body >
+<div class="grid" >
 		<div class="col-12-cen" id = "restaurantHeader">
 			<h2 id = "resh2">Mirpur Restaurants</h2>
 		</div>
 		<!--<div class="row" id ="restaurantPicture">		
 		</div> -->
-		<div class="row" id = "restaurantName">
-				
-		</div>
+		<div class="row" id = "restaurantName"></div>
 		<div class="row">
 		<div class="col-6-cen">
 			<span class="fa fa-star checked"></span>
@@ -52,8 +48,11 @@
 		</div>
 		
     </div>
-    </div>
-	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
-	<script src ="location.js"></script>
 </body>
+<script src="chefLogin.js"></script>
+
+
+<script src="login.js"></script>
+
+<script src ="location.js"></script>
 </html>

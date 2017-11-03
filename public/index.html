@@ -1,146 +1,144 @@
-<!doctype.html>
+<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>Ghorowa Khana</title>
-    <link rel="stylesheet" src = "//normalize-css.googlecode.com/svn/trunk/normalize.css" href="css/main.css">
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <script src="js/navbar.js"></script>    
+    <script src="js/navbar.js"></script>
     <script src="chefLogin.js"></script>
-    
-    
+
+
     <script src="login.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
     <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDRSMxZObtlFU7eDgkWmJkMJrK4RfOWZPg",
-    authDomain: "test1-aa9c8.firebaseapp.com",
-    databaseURL: "https://test1-aa9c8.firebaseio.com",
-    projectId: "test1-aa9c8",
-    storageBucket: "test1-aa9c8.appspot.com",
-    messagingSenderId: "569411524002"
-  };
-  firebase.initializeApp(config);
-</script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDRSMxZObtlFU7eDgkWmJkMJrK4RfOWZPg",
+            authDomain: "test1-aa9c8.firebaseapp.com",
+            databaseURL: "https://test1-aa9c8.firebaseio.com",
+            projectId: "test1-aa9c8",
+            storageBucket: "test1-aa9c8.appspot.com",
+            messagingSenderId: "569411524002"
+        };
+        firebase.initializeApp(config);
+    </script>
 
 </head>
-<body id="body" >
- 
+<body id="body">
 
-</div>
-    <dv class="grid" >
-        <div class="row">
-           <div class="col-6"><img src="./Picture/food.jpg" alt="This is an image"> 
-            </div>
-            <div class= "col-6">
-                <h2 class="title">GHOROWA KHANA</h2>
-                <h5 class="designation">Let Home Made Food Walk To You</h5>
-                 <div class="topnav" id="myTopnav">
-                    <a href="index.html">GhorowaKhana</a>
-                      <div class = "dropdown">
+<div class="grid" >
+    <div class="row">
+        <div class="col-2"><img src="./Picture/food.jpg" alt="This is an image">
+        </div>
+        <div class="col-10">
+            <h2 class="title">GHOROWA KHANA</h2>
+            <h5 class="designation">Let Home Made Food Walk To You</h5>
+            <div class="topnav" id="myTopnav">
+                <a href="index.html">GhorowaKhana</a>
+                <div class="dropdown">
                     <a> Sign up <i class="fa fa-caret-down"></i> </a>
-                    <div class = "dropdown-content">
+                    <div class="dropdown-content">
                         <a id="sup" href="signuppage.html">User</a>
-                        <a id = "chsup" href="chefregistration.html"> Chef </a>
+                        <a id="chsup" href="chefregistration.html"> Chef </a>
                     </div>
                 </div>
                 <div class="dropdown">
                     <a> Log in <i class="fa fa-caret-down"></i> </a>
                     <div class="dropdown-content">
                         <a id="lin" href="javascript:void(0)" onclick="div_show();">User</a>
-                        <a id="chlin" href="javascript:void(0)" onclick = "div2_show();">Chef</a>
-
+                        <a id="chlin" href="javascript:void(0)" onclick="div2_show();">Chef</a>
                     </div>
                 </div>
-                     <a href="contact.html">Contact Us</a>
-                     <a href="about.html">About</a>
-                </div> 
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">About</a>
             </div>
         </div>
-        <form>
-        <div class="search-box">
-            <!-- <input type="text" name="search" placeholder="Search.."> -->
-            <input list="Resturant" id = "loc">
-            <datalist id="Resturant">
-                <option value="Mirpur">
-                <option value="Dhanmondi">
-            </datalist>
-            <div class= "button"><button type="button" onclick = "locationCheck()">Search</button></div>
-        </div>
-    </form>
-        <div class="row">
-            <div class="col-12"><img src="./Picture/big.jpg" alt="This is an image">
+    </div>
+    <div class="row">
+        <div class="col-12 background-img" style="background-image: url(./Picture/big.jpg);width:100%;height:300px">
+            <div class="search-box">
+                <!-- <input type="text" name="search" placeholder="Search.."> -->
+                <input list="Resturant" id="loc">
+                <datalist id="Resturant">
+                    <option value="Mirpur">
+                    <option value="Dhanmondi">
+                </datalist>
+                <div class="button">
+                    <button type="button" onclick="locationCheck()">Search</button>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <h2 class="smallTitle">What We Have To Offer</h2>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2 class="smallTitle">What We Have To Offer</h2>
         </div>
-        <div class="row">
-            <div class="col-4"><img src="./Picture/chef.jpg" alt="This is an image"></div>
-            <div class="col-4"><img src="./Picture/user.jpg" alt="This is an image"></div>
-            <div class="col-4"><img src="./Picture/cash.jpg" alt="This is an image"></div>
+    </div>
+    <div class="row">
+        <div class="col-4"><img src="./Picture/chef.jpg" alt="This is an image"></div>
+        <div class="col-4"><img src="./Picture/user.jpg" alt="This is an image"></div>
+        <div class="col-4"><img src="./Picture/cash.jpg" alt="This is an image"></div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4 class="label">As A Chef</h4>
+            <h4 class="label">Sell Your Own Dishes</h4>
         </div>
-        <div class="row">
-            <div class="col-4">
-                <h4 class="label">As A Chef</h4>
-                 <h4 class="label">Sell Your Own Dishes</h4>
-            </div>
-                        <div class="col-4">
-                <h4 class="label">As An User</h4>
-                 <h4 class="label">Just Enjoy Home Made Food</h4>
-            </div>
-                        <div class="col-4">
-                <h4 class="label">Cash On Delivery</h4>
-                 <h4 class="label">Pay Only When You Have The Food</h4>
-            </div>
+        <div class="col-4">
+            <h4 class="label">As An User</h4>
+            <h4 class="label">Just Enjoy Home Made Food</h4>
         </div>
+        <div class="col-4">
+            <h4 class="label">Cash On Delivery</h4>
+            <h4 class="label">Pay Only When You Have The Food</h4>
         </div>
-     </div>
+    </div>
+</div>
+</div>
 
-     
 
 <div id="abc">
-<!-- Popup Div Starts Here -->
-<div id="popupContact">
-<!-- Contact Us Form -->
-<form id="form" name="form" >
-<div class="popclose">
-    <a onclick = "div_hide();">X</a>
-<h2> Login </h2>
-</div>
-<hr>
+    <!-- Popup Div Starts Here -->
+    <div id="popupContact">
+        <!-- Contact Us Form -->
+        <form id="form" name="form">
+            <div class="popclose">
+                <a onclick="div_hide();">X</a>
+                <h2> Login </h2>
+            </div>
+            <hr>
 
-<input id="username" name="username" placeholder = "User name" type = "text" required>
-<input id="email" name="email" placeholder="Email" type="text" required><br><br>
-<input type = "password" id = "pass" placeholder = "Password" name = "psw" required><br><br>
-<input type = "submit" id="login" class="SignUp" value="Login" onclick ="changeState()" > <br>
+            <input id="username" name="username" placeholder="User name" type="text" required>
+            <input id="email" name="email" placeholder="Email" type="text" required><br><br>
+            <input type="password" id="pass" placeholder="Password" name="psw" required><br><br>
+            <input type="submit" id="login" class="SignUp" value="Login" onclick="changeState()"> <br>
 
-</form>
-</div>
+        </form>
+    </div>
 </div>
 
 <div id="def">
 
     <div id="popupContact2">
 
-        <form action="#" id="form2" name="form2" >
+        <form id="form2" name="form2">
             <div class="popclose">
-                <a onclick = "div2_hide();">X</a>
+                <a onclick="div2_hide();">X</a>
             </div>
             <h2> Chef Log in </h2>
-            <hr> <br>
+            <hr>
+            <br>
 
             <level><b> Email </b></level>
             <input id="email2" name="email2" placeholder="Email" type="text" required><br> <br>
 
-            <level><b> Password </b></level><br><br>
-            <input type = "password" id = "pass2" placeholder = "Password" name = "psw" required><br><br>
-            <input type = "submit" id="login" class="SignUp" value="Login" onclick ="chef_login()" > <br>
+            <level><b> Password </b></level>
+            <br><br>
+            <input type="password" id="pass2" placeholder="Password" name="psw" required><br><br>
+            <input id="login" class="SignUp" value="Login" onclick="chef_login()"> <br>
 
         </form>
     </div>

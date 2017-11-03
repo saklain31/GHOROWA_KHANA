@@ -6,25 +6,16 @@ var resName2;
 var aId = 0;
 var nameDivId = 0;
 
- var config = {
-    apiKey: "AIzaSyDRSMxZObtlFU7eDgkWmJkMJrK4RfOWZPg",
-    authDomain: "test1-aa9c8.firebaseapp.com",
-    databaseURL: "https://test1-aa9c8.firebaseio.com",
-    projectId: "test1-aa9c8",
-    storageBucket: "test1-aa9c8.appspot.com",
-    messagingSenderId: "569411524002"
- };
- firebase.initializeApp(config);
 
 function create(htmlStr) {
     var frag = document.createDocumentFragment(),
-    temp = document.createElement('div');
+        temp = document.createElement('div');
     temp.innerHTML = htmlStr;
     while (temp.firstChild) {
         frag.appendChild(temp.firstChild);
+      }
+        return frag;
     }
-    return frag;
-}
 	
 function insertAfter(newNode , referenceNode)
 {
@@ -70,6 +61,7 @@ function loadComponent()
 	var i = 0;
 	firebase.database().ref('chefLocation/'+loc).once('value').then(function(snapshot) {
 		snapshot.forEach(function(childSnapshot) {
+			var chefProfile=childSnapshot.val();
 			console.log(i);
 			if(i%2==0 && i!=0)
 			{
@@ -82,19 +74,21 @@ function loadComponent()
 			{
 			      resName1 = picName;
                   console.log("resName1 : "+resName1);
-                  fragment = create('<div class="col-6"><a href="chinu.html" target="_blank"><img src="Picture/'+picName+'.jpg" width="550" height="400"alt="This is an image"></a></div> ');				  
+                  fragment = create('<div class="col-6" style="text-align: center"><a  href="chinu.html" target="_blank"><img src="Picture/'+picName+'.jpg" width="550" height="400" alt="This is an image">'+picName+'</a></div> ');
 			}				
 			else 
 			{
 				resName2 = picName;
 				console.log("resName2 : "+resName2);
-				fragment = create('<div class= "col-6-right" ><a href="sakla.html" target="_blank"><img src="Picture/'+picName+'.jpg" width="550" height="400"alt="This is an image"></a></div> ');
+				fragment = create('<div class= "col-6-right" style="text-align: center" ><a href="sakla.html" target="_blank"><img src="Picture/'+picName+'.jpg" width="550" height="400" alt="This is an image">'+picName+'</a></div> ');
 			}
 			i = i+1;
 			var id =  picId+picRows;
 			document.getElementById(id).appendChild(fragment);
 			
 		});
-		addNewRow();
+	//	addNewRow();
 	});
+	
+
 }
