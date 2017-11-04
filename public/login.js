@@ -1,4 +1,8 @@
+//  Saklain Zaman, Chinmoy Chakraborty
 
+
+
+// Saklain Zaman
 
 function signed_in()
 {
@@ -68,7 +72,10 @@ function log_out()
 	
 }
 
-//State pattern
+
+// Chinmoy Chakraborty
+
+/**** State pattern *****/
 
 
 var curState;

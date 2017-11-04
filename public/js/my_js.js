@@ -1,3 +1,6 @@
+// Chinmoy Chakraborty , Sameen Wasif Hussain
+
+
 // Validating Empty Field
 
 var name = "";
@@ -82,7 +85,11 @@ function div2_show() {
     document.getElementById('def').style.display = "block";
 }
 
-//Iterator
+
+// Chinmoy Chakraborty
+
+/**** Iterator ****/
+
 var Iterator = function(items) {
     this.index = 0;
     this.items = items;

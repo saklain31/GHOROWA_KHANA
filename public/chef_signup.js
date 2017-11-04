@@ -1,3 +1,6 @@
+// Saklain Zaman 
+
+
 const username = document.getElementById('gname');
 const psw = document.getElementById('pass');
 const email = document.getElementById('em');
@@ -13,6 +16,9 @@ var config = {
     messagingSenderId: "569411524002"
 };
 firebase.initializeApp(config);
+
+
+//Sameen Wasif Hussain 
 
 function chef_doSomething() {
     // Make quick references to our fields.
@@ -38,6 +44,7 @@ function chef_doSomething() {
     }
 }
 
+// Saklain Zaman
 
 function complete_signup() {
     const email_val = email.value; 

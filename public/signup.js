@@ -1,3 +1,6 @@
+// Chinmoy Chakraborty, Saklain Zaman
+
+
 const firstname= document.getElementById('firstname');
 const username = document.getElementById('username');
 const psw = document.getElementById('psw');
@@ -16,6 +19,7 @@ messagingSenderId: "569411524002"
 };
 firebase.initializeApp(config);
 
+// Chinmoy Chakraborty
 
  var userNameValidation = function()
  {
@@ -57,7 +61,7 @@ firebase.initializeApp(config);
  	}
  }
 
- //facade pattern
+ /**** facade pattern ****/
 
 var signUpObject = function() {
     // Make quick references to our fields.
@@ -83,6 +87,7 @@ var signUpObject = function() {
 	}
 };
 
+// Saklain Zaman
 
 function complete_signup() {
 	const email_val = email.value; //check for real email

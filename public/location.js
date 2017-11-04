@@ -1,3 +1,6 @@
+// Chinmoy Chakraborty
+
+
 var picRows = 0;
 var picId = "restaurantPicture";
 var nameId = "restaurantName";
@@ -31,14 +34,14 @@ function addNewRow()
 	referenceNode.parentNode.insertBefore(fr, referenceNode.nextSibling);
 	var aTagId = "a"+aId;
 	var divId = "rName"+nameDivId;
-	var fre = create('<div class="col-6-cen" ><h2><a id="'+aTagId+'" href="chinu.html" target="_blank">Chinu</a></h2></div> ');
+	var fre = create('<div class="col-6-cen" ><h2><a id="'+aTagId+'" href="chinu.html" target="_blank"></a></h2></div> ');
 	document.getElementById(n_id).appendChild(fre);
 	document.getElementById(aTagId).innerHTML = resName1;
 	aId = aId + 1;
     nameDivId =  nameDivId + 1;
 	aTagId = "a"+aId;
 	divId = "rName" + nameDivId;
-	fre = create('<div class="col-6-cen" ><h2><a id="'+aTagId+'" href="sakla.html" target="_blank">Sakla</a></h2></div> ');
+	fre = create('<div class="col-6-cen" ><h2><a id="'+aTagId+'" href="sakla.html" target="_blank"></a></h2></div> ');
 	document.getElementById(n_id).appendChild(fre);
 	document.getElementById(aTagId).innerHTML = resName2;
 	picRows += 1;
