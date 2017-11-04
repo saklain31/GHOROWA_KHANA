@@ -90,7 +90,7 @@ function loadComponent()
 			document.getElementById(id).appendChild(fragment);
 			
 		});
-	//	addNewRow();
+		addNewRow();
 	});
 	
 

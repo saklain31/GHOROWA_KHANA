@@ -1,4 +1,4 @@
-// Chinmoy Chakraborty, Saklain Zaman
+// Chinmoy Chakraborty, Saklain Zaman, Sameen Wasif Hussain 
 
 
 const firstname= document.getElementById('firstname');
@@ -62,6 +62,7 @@ firebase.initializeApp(config);
  }
 
  /**** facade pattern ****/
+ // Sameen Wasif Hussain
 
 var signUpObject = function() {
     // Make quick references to our fields.

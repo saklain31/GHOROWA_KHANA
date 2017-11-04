@@ -15,9 +15,10 @@ window.onload =  func();
 function func()
 {   
 
-	firebase.auth().onAuthStateChanged(function(user) {
+	
+    firebase.auth().onAuthStateChanged(function(user) {
 		if (user !== null) {
-			console.log("user not null");
+			//console.log("user not null");
 			var userId = firebase.auth().currentUser.uid;	
 			console.log(userId);
 			
@@ -25,11 +26,7 @@ function func()
 			firebase.database().ref('chefIndex').once('value').then(function(snapshot) {
 				place=snapshot.child(userId).val();
 				console.log("place"+place);
-			}).catch(function(error) {
-				alert('chefIndex read failed');
-			});
-
-			firebase.database().ref('chefLocation/'+place+'/'+userId).once('value').then(function(snapshot) {
+				firebase.database().ref('chefLocation/'+place+'/'+userId).once('value').then(function(snapshot) {
 				userProperty=snapshot.val();
 				console.log(snapshot.key);
 				console.log(snapshot.child("username").val());
@@ -44,13 +41,15 @@ function func()
 				document.getElementById('pem').innerHTML = em;
 				alert(document.getElementById('pro').innerHTML);
 
+			   });
+			}).catch(function(error) {
+				alert('chefIndex read failed');
 			});
-		}
-		else
-		{
-			console.log("user null");
-		}
-	});		
+        }
+    });
+
+			
+		
 }
 
 
